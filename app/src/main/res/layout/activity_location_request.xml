@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/flower"
+    tools:context=".location.LocationRequest">
+
+    <Button
+        android:id="@+id/btn_get_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Get Location" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="latitude"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="longitude"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:textSize="35dp" />
+</LinearLayout>
