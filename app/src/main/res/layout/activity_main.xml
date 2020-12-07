@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flower"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="50dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Welcome to test android feature app!!"
+                android:textColor="#F1F1F1"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/test_notifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Notifications" />
+
+            <Button
+                android:id="@+id/test_aoudio_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Audio Record" />
+
+            <Button
+                android:id="@+id/test_video_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Video Record" />
+
+            <Button
+                android:id="@+id/test_gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test GPS" />
+
+            <Button
+                android:id="@+id/test_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Wifi" />
+
+            <Button
+                android:id="@+id/tset_vibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tset Vibration" />
+
+            <Button
+                android:id="@+id/test_screen_secord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Test Screen Record" />
+
+            <Button
+                android:id="@+id/test_bluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Bluetooth" />
+
+            <Button
+                android:id="@+id/sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test Send sms" />
+
+            <Button
+                android:id="@+id/camreavedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test Camrea Vedio" />
+
+            <Button
+                android:id="@+id/text_to_speach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text To Speech" />
+
+            <Button
+                android:id="@+id/speech_to_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Speech To Text" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
