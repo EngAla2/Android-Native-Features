@@ -32,7 +32,6 @@
         <activity android:name=".SMS.SendSMS" />
         <activity android:name=".bluetooth.Bluetooth" />
         <activity android:name=".location.LocationRequest" />
-        <activity android:name=".camera2video.CameraActivity" />
         <activity android:name=".screenRecord.ScreenRecord" />
         <activity android:name=".network.WiFi" />
         <activity android:name=".vibration.Vibration" />
@@ -42,6 +41,7 @@
         <activity android:name=".tryandroidnotif.server.CreateChannel" />
         <activity android:name=".tryandroidnotif.server.CreateNotif" />
         <activity android:name=".tryandroidnotif.NotifActivity" />
+        <activity android:name=".audio.AudioActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

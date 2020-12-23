@@ -21,13 +21,13 @@ import java.lang.Exception
 
 @RequiresApi(api = Build.VERSION_CODES.M)
 class AudioActivity : AppCompatActivity() {
-    var play : Button? = null
-    var stop : Button? = null
-    var record: Button? = null
+    var play : ImageButton? = null
+    var stop : ImageButton? = null
+    var record: ImageButton? = null
     var record_name: EditText? = null
     val RECORD_AUDIO_REQUEST_CODE = 111
     val root = android.os.Environment.getExternalStorageDirectory()
-    val file = File(root.absolutePath + "/AndroidCodility/Audios")
+    val file = File(root.absolutePath + "/AndroidRecorder/Audios")
     var recordArrayList = ArrayList<ListViewModel>()
     var listView: ListView? = null
     var recordList = ArrayList<ListViewModel>()
@@ -37,9 +37,9 @@ class AudioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_audio)
-        play = findViewById<Button>(R.id.play)
-        stop = findViewById<Button>(R.id.stop)
-        record = findViewById<Button>(R.id.record)
+        play = findViewById<ImageButton>(R.id.play)
+        stop = findViewById<ImageButton>(R.id.stop)
+        record = findViewById<ImageButton>(R.id.record)
         listView = findViewById<ListView>(R.id.dynamic_list)
         record_name = findViewById<EditText>(R.id.record_name)
 
@@ -67,11 +67,9 @@ class AudioActivity : AppCompatActivity() {
                 mr = MediaRecorder()
                 mr!!.setAudioSource(MediaRecorder.AudioSource.MIC)
                 mr!!.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
-                val root = android.os.Environment.getExternalStorageDirectory()
-                val file = File(root.absolutePath + "/AndroidCodility/Audios")
                 if (!file.exists()) { file.mkdirs() }
 
-                val fileName = root.absolutePath + "/AndroidCodility/Audios/" + (name + ".mp3")
+                val fileName = file.toString() + (name + ".mp3")
                 Log.d("filename", fileName)
                 mr!!.setOutputFile(fileName)
                 mr!!.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
@@ -112,8 +110,7 @@ class AudioActivity : AppCompatActivity() {
     }
 
     private fun getPermissionToRecordAudio() {
-        // 1) Use the support library version ContextCompat.checkSelfPermission(...) to avoid checking the build version since Context.checkSelfPermission(...) is only available in Marshmallow
-        // 2) Always check for permission (even if permission has already been granted) since the user can revoke permissions at any time through Settings
+        // Always check for permission (even if permission has already been granted) since the user can revoke permissions at any time through Settings
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED
             || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
             || ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -128,21 +125,17 @@ class AudioActivity : AppCompatActivity() {
             if (grantResults.size == 3 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED && grantResults[2] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Record Audio permission granted", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "You must give permissions to use this app. App is exiting.", Toast.LENGTH_SHORT).show()
-                finishAffinity()
+                Toast.makeText(this, "You must give permissions to use this app. Please allow Record Audio permission from settings, App is exiting.", Toast.LENGTH_SHORT).show()
             }
         }
     }
     public fun fillListViwe() {
         val recordArrayList = ArrayList<ListViewModel>()
-        val root = android.os.Environment.getExternalStorageDirectory()
-        val path = root.absolutePath + "/AndroidCodility/Audios"
-        val directory = File(path)
+        val directory = File(file.toURI())
         val files = directory.listFiles()
         if (files != null) {
             for (i in files.indices) {
                 val fileName = files[i].name
-                val recordingUri = root.absolutePath + "/AndroidCodility/Audios/" + fileName
                 recordArrayList.add(ListViewModel(file.toString() + "/$fileName", fileName))
 
             }

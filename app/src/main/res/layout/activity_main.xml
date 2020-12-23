@@ -48,12 +48,6 @@
                 android:text="Test Audio Record" />
 
             <Button
-                android:id="@+id/test_video_record"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Video Record" />
-
-            <Button
                 android:id="@+id/test_gps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,12 +84,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="test Send sms" />
-
-            <Button
-                android:id="@+id/camreavedio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="test Camrea Vedio" />
 
             <Button
                 android:id="@+id/text_to_speach"

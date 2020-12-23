@@ -10,8 +10,6 @@ import android.widget.TextView
 import com.example.testandroidfetures.R
 import com.example.testandroidfetures.audio.deleteRecord
 import com.example.testandroidfetures.audio.playRecord
-import com.example.tryandroidnotif.com.example.recordaudio.deleteRecord
-import com.example.tryandroidnotif.com.example.recordaudio.playRecord
 
 class ListViewModelAdapter(val context: Context, val listModelArrayList: ArrayList<ListViewModel>) : BaseAdapter() {
 
