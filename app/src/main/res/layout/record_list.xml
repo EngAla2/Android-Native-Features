@@ -31,11 +31,11 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/play"
                     android:text="TextView"
-                    android:textColor="?android:attr/colorForeground"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_toRightOf="@+id/play" />
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/keep"

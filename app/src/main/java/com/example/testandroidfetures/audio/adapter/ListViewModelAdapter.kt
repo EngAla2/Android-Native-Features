@@ -10,8 +10,7 @@ import android.widget.TextView
 import com.example.testandroidfetures.R
 import com.example.testandroidfetures.audio.deleteRecord
 import com.example.testandroidfetures.audio.playRecord
-import com.example.tryandroidnotif.com.example.recordaudio.deleteRecord
-import com.example.tryandroidnotif.com.example.recordaudio.playRecord
+
 
 class ListViewModelAdapter(val context: Context, val listModelArrayList: ArrayList<ListViewModel>) : BaseAdapter() {
 
@@ -32,7 +31,11 @@ class ListViewModelAdapter(val context: Context, val listModelArrayList: ArrayLi
         record.rec_name.text = listModelArrayList[position].record_name
 
         record.keep_rec.setOnClickListener {
-            deleteRecord(name = "", paths = listModelArrayList[position].id)
+            deleteRecord(
+                name = "",
+                paths = listModelArrayList[position].id,
+                view
+            )
         }
         record.rec_name.setOnClickListener {
             playRecord(name= "", paths = listModelArrayList[position].id)

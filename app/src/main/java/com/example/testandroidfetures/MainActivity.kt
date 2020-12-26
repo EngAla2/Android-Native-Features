@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.testandroidfetures.camera2video.CameraActivity
 import com.example.testandroidfetures.SMS.SendSMS
 import com.example.testandroidfetures.SoeechToText.TextToSpeech
 import com.example.testandroidfetures.audio.AudioActivity
@@ -65,10 +64,7 @@ class MainActivity : AppCompatActivity() {
         test_aoudio_record.setOnClickListener {
             startActivity(Intent(this, AudioActivity::class.java) )
         }
-        val vediorec = findViewById<Button>(R.id.camreavedio)
-        vediorec.setOnClickListener {
-            startActivity(Intent(this, CameraActivity::class.java) )
-        }
+
         // Text To Speech Audio
         val text_to_speach = findViewById<Button>(R.id.text_to_speach)
         text_to_speach.setOnClickListener {

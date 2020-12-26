@@ -24,7 +24,7 @@
         android:icon="@drawable/ic_baseline_android_24"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_baseline_android_24"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/Theme.TestAndroidFetures"
         android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name=".testToSpeech.SpeechToText"/>
@@ -32,8 +32,7 @@
         <activity android:name=".SMS.SendSMS" />
         <activity android:name=".bluetooth.Bluetooth" />
         <activity android:name=".location.LocationRequest" />
-        <activity android:name=".camera2video.CameraActivity" />
-        <activity android:name=".screenRecord.ScreenRecord" />
+          <activity android:name=".screenRecord.ScreenRecord" />
         <activity android:name=".network.WiFi" />
         <activity android:name=".vibration.Vibration" />
         <activity android:name=".tryandroidnotif.server.ServerSide" />
@@ -42,6 +41,7 @@
         <activity android:name=".tryandroidnotif.server.CreateChannel" />
         <activity android:name=".tryandroidnotif.server.CreateNotif" />
         <activity android:name=".tryandroidnotif.NotifActivity" />
+        <activity android:name=".audio.AudioActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

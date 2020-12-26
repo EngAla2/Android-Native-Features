@@ -27,7 +27,7 @@ class AudioActivity : AppCompatActivity() {
     var record_name: EditText? = null
     val RECORD_AUDIO_REQUEST_CODE = 111
     val root = android.os.Environment.getExternalStorageDirectory()
-    val file = File(root.absolutePath + "/AndroidCodility/Audios")
+    val file = File(root.absolutePath + "/AndroidRecorder/Audios")
     var recordArrayList = ArrayList<ListViewModel>()
     var listView: ListView? = null
     var recordList = ArrayList<ListViewModel>()
@@ -60,28 +60,27 @@ class AudioActivity : AppCompatActivity() {
 
         record?.setOnClickListener{
             try{
-                record?.isEnabled = false
-                play?.isEnabled = false
+
 
                 name = System.currentTimeMillis().toString()
                 mr = MediaRecorder()
                 mr!!.setAudioSource(MediaRecorder.AudioSource.MIC)
                 mr!!.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
                 val root = android.os.Environment.getExternalStorageDirectory()
-                val file = File(root.absolutePath + "/AndroidCodility/Audios")
+                val file = File(root.absolutePath + "/AndroidRecorder/Audios")
                 if (!file.exists()) { file.mkdirs() }
 
-                val fileName = root.absolutePath + "/AndroidCodility/Audios/" + (name + ".mp3")
+                val fileName = root.absolutePath + "/AndroidRecorder/Audios/" + (name + ".mp3")
                 Log.d("filename", fileName)
                 mr!!.setOutputFile(fileName)
                 mr!!.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
-
+                record?.isEnabled = false
+                play?.isEnabled = false
                 try {
                     mr!!.prepare()
                     mr!!.start()
                 } catch (e: IOException) {e.printStackTrace()}
                 stop?.isEnabled = true
-                fillListViwe()
             }
             catch (e : Exception){
                 println("#####====================###########===============################")
@@ -92,10 +91,13 @@ class AudioActivity : AppCompatActivity() {
         }
 //        Stop recording
         stop?.setOnClickListener {
-
             try {
                 mr!!.stop()
                 mr!!.release()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            try {
                 play?.isEnabled = true
                 stop?.isEnabled = false
                 record?.isEnabled = true
@@ -136,14 +138,15 @@ class AudioActivity : AppCompatActivity() {
     public fun fillListViwe() {
         val recordArrayList = ArrayList<ListViewModel>()
         val root = android.os.Environment.getExternalStorageDirectory()
-        val path = root.absolutePath + "/AndroidCodility/Audios"
+        val path = root.absolutePath + "/AndroidRecorder/Audios"
         val directory = File(path)
         val files = directory.listFiles()
         if (files != null) {
             for (i in files.indices) {
                 val fileName = files[i].name
-                val recordingUri = root.absolutePath + "/AndroidCodility/Audios/" + fileName
-                recordArrayList.add(ListViewModel(file.toString() + "/$fileName", fileName))
+                val recordingUri = "$path/$fileName"
+                println(recordingUri)
+                recordArrayList.add(ListViewModel(recordingUri, fileName))
 
             }
             var listViewAdapter = ListViewModelAdapter(this, recordArrayList as ArrayList)
