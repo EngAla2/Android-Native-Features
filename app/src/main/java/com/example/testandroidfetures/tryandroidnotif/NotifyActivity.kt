@@ -8,7 +8,7 @@ import com.example.testandroidfetures.R
 import com.example.testandroidfetures.tryandroidnotif.client.Client
 import com.example.testandroidfetures.tryandroidnotif.server.ServerSide
 
-class NotifActivity : AppCompatActivity() {
+class NotifyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

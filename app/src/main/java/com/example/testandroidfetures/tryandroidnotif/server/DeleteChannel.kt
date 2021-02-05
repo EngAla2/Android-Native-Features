@@ -9,7 +9,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.example.testandroidfetures.R
-import com.example.testandroidfetures.tryandroidnotif.NotifActivity
+import com.example.testandroidfetures.tryandroidnotif.NotifyActivity
 import com.example.testandroidfetures.tryandroidnotif.delete_nitif_channel
 import com.example.testandroidfetures.tryandroidnotif.fill_drop_down_list
 
@@ -26,7 +26,7 @@ class DeleteChannel : AppCompatActivity() {
 
         del_notif_ch.setOnClickListener {
             delete_nitif_channel(id=spinner.getSelectedItem().toString(), activity=this)
-            startActivity(Intent(this, NotifActivity::class.java))
+            startActivity(Intent(this, NotifyActivity::class.java))
 
         }
     }

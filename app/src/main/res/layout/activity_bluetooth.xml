@@ -4,70 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/flower"
+    android:background="@drawable/down"
     tools:context=".bluetooth.Bluetooth">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-<!--        Display whether bluetooth is available or not-->
+        <!--        Display whether bluetooth is available or not-->
         <TextView
             android:id="@+id/statusBluetoothTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="25dp"
             android:text=""
             android:textAlignment="center"
-            android:textSize="20sp"
-            android:layout_margin="25dp"
-            android:textColor="#000"/>
+            android:textColor="#000" />
         <!--Bluetooth icon (on/off)-->
         <ImageView
             android:id="@+id/bluetoothIv"
             android:layout_width="100dp"
             android:layout_height="100dp" />
-<!--        On Button-->
+        <!--        On Button-->
         <Button
             android:id="@+id/onBtn"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_style"
             android:minWidth="200dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:shadowColor="#A6000000"
+            android:shadowRadius="16"
             android:text="Turn On"
-            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+            android:textSize="20sp" />
         <!--Off btn-->
         <Button
             android:id="@+id/offBtn"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_style"
             android:minWidth="200dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:shadowColor="#A6000000"
+            android:shadowRadius="16"
             android:text="Turn Off"
-            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
         <!--Discoverable button-->
         <Button
             android:id="@+id/discoverableBtn"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_style"
             android:minWidth="200dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:shadowColor="#A6000000"
+            android:shadowRadius="16"
             android:text="Discoverable"
-            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
         <!--Get list of paired devices button-->
         <Button
             android:id="@+id/pairedBtn"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_style"
             android:minWidth="200dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:shadowColor="#A6000000"
+            android:shadowRadius="16"
             android:text="Get Paired Devices"
-            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
         <!--Show paired devices here-->
         <TextView
             android:id="@+id/pairedTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:background="@drawable/border"
             android:minWidth="200dp"
             android:text=""
-            android:textColor="#000"
-            android:layout_margin="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColor="#000" />
 
     </LinearLayout>
 

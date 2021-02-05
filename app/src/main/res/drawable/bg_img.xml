@@ -1,0 +1,4 @@
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/clip_earth"
+    android:gravity="start" />

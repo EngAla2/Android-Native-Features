@@ -7,32 +7,64 @@
     android:layout_centerInParent="false"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
-    android:background="@drawable/bg_tts"
+    android:background="@drawable/tts"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".testToSpeech.SpeechToText">
-
-    <Button
-        android:id="@+id/btn_stt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speak" />
-
-    <EditText
-        android:id="@+id/et_text_input"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/bg_edit_text"
-        android:gravity="center"
-        android:hint="Text from STT or for TTS goes here." />
-
-    <Button
-        android:id="@+id/btn_tts"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Listen" />
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        app:cardBackgroundColor="#B5C5C5C5"
+        android:foregroundGravity="center"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/et_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/textedit_style"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:hint="Text from STT or for TTS goes here."
+            android:text="Text from STT or for TTS goes here." />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_tts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_style"
+                android:text="Listen" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_stt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Speak"
+                android:background="@drawable/btn_style"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

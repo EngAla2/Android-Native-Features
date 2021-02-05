@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/flower"
+    android:background="@drawable/bl"
+    style="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -13,89 +14,159 @@
         android:foregroundGravity="center">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="50dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="50dp"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="Welcome to test android feature app!!"
-                android:textColor="#F1F1F1"
-                android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Welcome to test android feature app!!"
+            android:textColor="#F1F1F1"
+            android:textSize="35sp" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
 
             <Button
                 android:id="@+id/test_notifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Notifications" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="Test Notifications"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/test_aoudio_record"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Audio Record" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_audio_record"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/test_gps"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test GPS" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_gps"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/test_wifi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Wifi" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_wifi"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/tset_vibration"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tset Vibration" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_vibration"
+                android:layout_marginTop="13dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/test_screen_secord"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
                 android:gravity="center"
-                android:text="Test Screen Record" />
+                android:text="@string/test_screen_record"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/test_bluetooth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Bluetooth" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_bluetooth"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/sms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="test Send sms" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/test_send_sms"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/text_to_speach"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Text To Speech" />
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/text_to_speech"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
 
             <Button
                 android:id="@+id/speech_to_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Speech To Text" />
-        </LinearLayout>
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:text="@string/speech_to_text"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_style_2"
+                android:minWidth="200dp"
+                android:shadowColor="#A6000000"
+                android:shadowRadius="16"
+                android:textSize="15sp"/>
+        </GridLayout>
+    </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,7 +58,7 @@ class ScreenRecord : AppCompatActivity() {
         screenDensity = metrics.densityDpi
 
         mediaProjectionManager = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
-
+        val recordToggleButton = findViewById<ToggleButton>(R.id.recordToggleButton)
         recordToggleButton.setOnClickListener {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 + ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
@@ -171,7 +171,6 @@ class ScreenRecord : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
         when (requestCode) {
             REQUEST_PERMISSIONS -> {
                 if (grantResults.isNotEmpty() && (grantResults[0] + grantResults[1] == PackageManager.PERMISSION_GRANTED)) {

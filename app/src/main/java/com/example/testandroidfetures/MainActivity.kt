@@ -12,7 +12,7 @@ import com.example.testandroidfetures.location.LocationRequest
 import com.example.testandroidfetures.network.WiFi
 import com.example.testandroidfetures.screenRecord.ScreenRecord
 import com.example.testandroidfetures.testToSpeech.SpeechToText
-import com.example.testandroidfetures.tryandroidnotif.NotifActivity
+import com.example.testandroidfetures.tryandroidnotif.NotifyActivity
 import com.example.testandroidfetures.vibration.Vibration
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         //        Test Notification
         val notif = findViewById<Button>(R.id.test_notifications)
         notif.setOnClickListener {
-            startActivity(Intent(this, NotifActivity::class.java) )
+            startActivity(Intent(this, NotifyActivity::class.java) )
         }
         //        Test Notification
         val screenRecord = findViewById<Button>(R.id.test_screen_secord)

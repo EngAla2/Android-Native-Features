@@ -22,4 +22,13 @@
     <string name="description_info">Info</string>
     <string name="permission_request">This sample needs permission for camera and audio recording.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="test_wifi">Test Wifi</string>
+    <string name="test_gps">Test GPS</string>
+    <string name="test_vibration">Test Vibration</string>
+    <string name="test_screen_record">Test Screen Record</string>
+    <string name="test_bluetooth">Test Bluetooth</string>
+    <string name="test_send_sms">test Send sms</string>
+    <string name="text_to_speech">Text To Speech</string>
+    <string name="speech_to_text">Speech To Text</string>
+    <string name="test_audio_record">Test Audio Record</string>
 </resources>

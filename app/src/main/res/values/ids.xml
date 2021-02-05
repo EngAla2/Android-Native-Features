@@ -6,4 +6,7 @@
     <item name="discoverableBtn" type="id" />
     <item name="pairedBtn" type="id" />
     <item name="pairedTv" type="id" />
+    <item name="latitude_text" type="id" />
+    <item name="longitude_text" type="id" />
+    <item name="btn_get_location" type="id" />
 </resources>
